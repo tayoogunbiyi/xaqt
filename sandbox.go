@@ -208,6 +208,7 @@ func (s *sandbox) PrepareContainer() error {
 			Binds: []string{s.options.folder + ":/usercode"},
 		},
 		nil, // no network config currently
+		nil,
 		s.ID,
 	)
 	if err != nil {
